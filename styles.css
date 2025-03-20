@@ -233,9 +233,9 @@ background-repeat: no-repeat;
 
 /* Styling the heading */
 .hello-box h2 {
-        font-family: 'Rellion', sans-serif;
+    font-family: 'Rellion', sans-serif;
     /* Elegant font */
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 2px;
     color: #333;
