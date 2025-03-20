@@ -31,39 +31,48 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-function checkPassword() {
-    const correctPassword = "apple"; // 🔹 Change this to your real password
-    const enteredPassword = document.getElementById("password-input").value;
-    const errorMessage = document.getElementById("error-message");
-
-    if (enteredPassword === correctPassword) {
-        sessionStorage.setItem("authenticated", "true"); // ✅ Store auth
-        console.log("Login successful! Redirecting...");
-        window.location.href = "welcome.html"; // ✅ Send to the main page
-    } else {
-        errorMessage.style.display = "block"; // ✅ Show error message
-    }
+function revealWebsite() {
+    document.getElementById("helloPage").style.display = "none";
+    document.getElementById("websiteContent").style.display = "block";
+    document.getElementById("passwordOverlay").style.visibility = "visible";
+    document.getElementById("passwordOverlay").style.opacity = "1";
+    document.getElementById("passwordOverlay").style.display = "flex";
+    document.getElementById("passwordInput").focus(); // Focus input automatically
 }
-
-
-// Handle "Enter" key for password submission
+// Ensure Enter key submits the password correctly
 document.addEventListener("DOMContentLoaded", function () {
-    const passwordInput = document.getElementById("password-input");
+    const passwordInput = document.getElementById("passwordInput");
+    const form = document.getElementById("password-form");
 
     if (passwordInput) {
         passwordInput.addEventListener("keypress", function (event) {
             if (event.key === "Enter") {
-                checkPassword(event); // ✅ Calls function when Enter is pressed
+                event.preventDefault(); // Prevent page refresh
+                checkPassword(); // Call the function
             }
         });
     }
 
-    // Attach event listener to login form submission (if it exists)
-    const form = document.getElementById("password-form");
     if (form) {
-        form.addEventListener("submit", checkPassword);
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+            checkPassword();
+        });
     }
 });
+
+// Updated checkPassword function
+function checkPassword() {
+    const password = document.getElementById("passwordInput").value;
+
+    if (password === "apple") {
+        sessionStorage.setItem("authenticated", "true"); // ✅ Save authentication status
+        window.location.href = "welcome.html"; // ✅ Redirect to welcome page
+    } else {
+        alert("Incorrect password. Try again.");
+    }
+}
+
 
 //GALLERY 
 document.addEventListener("DOMContentLoaded", function () {

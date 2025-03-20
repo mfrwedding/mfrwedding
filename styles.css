@@ -206,6 +206,83 @@ background-repeat: no-repeat;
     margin-top: 20px;
 }
 
+#helloPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+/* The elegant rectangular text box */
+.hello-box {
+    background: rgba(255, 255, 255, 0.6);
+    /* Softer semi-transparent white */
+    padding: 30px 0px;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    /* Elegant border */
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    /* Soft shadow */
+    width: 500px;
+    /* More rectangular */
+}
+
+/* Styling the heading */
+.hello-box h2 {
+        font-family: 'Rellion', sans-serif;
+    /* Elegant font */
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.hello-box h4 {
+    color: #333;
+        font-size: 1rem;
+}
+
+/* Subheading styling */
+.hello-box p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #444;
+    margin: 5px 0;
+}
+
+
+
+/* Wedding Date */
+.hello-box .wedding-date {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #666;
+}
+/* Centered Reveal Button */
+.revealButton {
+    width: 50px;
+    height: 50px;
+    background-color: #9b0000;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0;
+    transition: background-color 0.3s;
+}
+
+.revealButton:hover {
+    background-color: #9b0000;
+}
 
 /* h2 for titles */
  h2 {
@@ -217,14 +294,66 @@ background-repeat: no-repeat;
     margin-bottom: 1rem;
 
 }
-.passwordText {
-    font-family: 'Rellion', sans-serif;
-    color: white;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 0rem;
-    margin-bottom: 1rem;
+
+
+
+#passwordOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible; /* Keep it visible */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000; /* Ensure it's on top of everything */
 }
+
+#passwordBox {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    z-index: 1001; /* Ensure it's above the overlay */
+    opacity: 1;
+}
+
+#passwordBox p {
+    font-family: 'Rellion', sans-serif;
+    color:#000
+
+}
+
+#passwordInput {
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+#passwordBox button {
+    background-color: #9b0000;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#passwordBox button:hover {
+    background-color: #9b0000;
+}
+
+
 
 /* h2 for titles */
 h3 {

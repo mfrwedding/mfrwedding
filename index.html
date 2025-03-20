@@ -14,14 +14,26 @@
 </head>
 
 <body class="index-body">
-    <div id="password-container">
-        <h2 class="passwordText">Enter Password to Access</h2>
-        <form id="password-form">
-            <input type="password" id="password-input" placeholder="Enter Password">
-            <button type="submit">Submit</button>
-        </form>
-        <p id="error-message" style="color: red; display: none;">Incorrect Password!</p>
+    <div id="helloPage">
+        <div class="hello-box">
+            <br>
+            <h2>Avinanda & Arnab's</h2>
+                    <h4>HAPPILY EVER AFTER  </h4>
+            <button class="revealButton" onclick="revealWebsite()">></button>
+        </div>
     </div>
+    
+    <!-- Actual wedding website content hidden initially -->
+    <div id="websiteContent" style="display: none;">
+        <div id="passwordOverlay">
+            <div id="passwordBox">
+                <p>Please enter the password to view the website.</p>
+                <input type="password" id="passwordInput">
+                <button onclick="checkPassword()">Submit</button>
+            </div>
+        </div>
+
+        </div>
 
     <script src="scripts.js"></script>
 </body>
