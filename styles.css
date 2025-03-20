@@ -231,6 +231,7 @@ background-repeat: no-repeat;
     /* More rectangular */
 }
 
+
 /* Styling the heading */
 .hello-box h2 {
     font-family: 'Rellion', sans-serif;
@@ -284,6 +285,38 @@ background-repeat: no-repeat;
     background-color: #9b0000;
 }
 
+
+@media screen and (max-width: 768px) {
+    .hello-box {
+        background: rgba(255, 255, 255, 0.6);
+        /* Softer semi-transparent white */
+        border-radius: 5px;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        /* Elegant border */
+        text-align: center;
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        /* Soft shadow */
+        width: 300px;
+        /* More rectangular */
+    }
+
+    /* Styling the heading */
+    .hello-box h2 {
+    font-family: 'Rellion', sans-serif;
+    /* Elegant font */
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #333;
+    text-transform: uppercase;
+
+}
+.hello-box h4 {
+    color: #333;
+        font-size: .8rem;
+}
+}
 /* h2 for titles */
  h2 {
     font-family: 'Rellion', sans-serif;
@@ -314,7 +347,7 @@ background-repeat: no-repeat;
 
 #passwordBox {
     background: rgba(255, 255, 255, 0.6);
-    padding: 30px;
+    padding: 15px;
     border-radius: 10px;
     text-align: center;
     color: black;
