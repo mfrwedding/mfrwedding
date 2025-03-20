@@ -110,8 +110,25 @@ background-repeat: no-repeat;
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f4f4f4;
+            background-image: url('pics/cover5.jpg');
             margin: 0;
             padding: 0;
+        }
+
+
+        @media (max-width: 768px) {
+            #password-container {
+                margin-top: 100%;
+            }
+            
+            .index-body {
+                        font-family: Arial, sans-serif;
+                        text-align: center;
+                        background-color: #f4f4f4;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
         }
 /* --------------*/
 
@@ -203,6 +220,10 @@ background-repeat: no-repeat;
     margin-bottom: 1rem;
 
 }
+.passwordText {
+    color: white !important
+}
+
 /* h2 for titles */
 h3 {
     font-family: 'Rellion', sans-serif;
