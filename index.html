@@ -16,11 +16,12 @@
 <body class="index-body">
     <div id="password-container">
         <h2 class="passwordText">Enter Password to Access</h2>
-        <input type="password" id="password-input" placeholder="Enter Password">
-        <button onclick="checkPassword()">Submit</button>
+        <form id="password-form">
+            <input type="password" id="password-input" placeholder="Enter Password">
+            <button type="submit">Submit</button>
+        </form>
         <p id="error-message" style="color: red; display: none;">Incorrect Password!</p>
     </div>
-    
 
     <script src="scripts.js"></script>
 </body>
