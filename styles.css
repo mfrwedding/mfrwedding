@@ -218,7 +218,12 @@ background-repeat: no-repeat;
 
 }
 .passwordText {
-    color: white !important
+    font-family: 'Rellion', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
 }
 
 /* h2 for titles */
