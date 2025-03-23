@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function checkPassword() {
     const password = document.getElementById("passwordInput").value;
 
-    if (password === "apple") {
+    if (password === "aviarnab2026") {
         sessionStorage.setItem("authenticated", "true"); // ✅ Save authentication status
         window.location.href = "welcome.html"; // ✅ Redirect to welcome page
     } else {
